@@ -1,5 +1,5 @@
 runner:
-  name: Website Screenshot
+  name: URL Screenshot
   description: This uses httpx -ss to capture a website screenshot
   version: 0.0.1
 
