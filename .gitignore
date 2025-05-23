@@ -1,3 +1,11 @@
+
+# secrets, env parms
+.DS_Store
+.env
+secrets/*
+go*.tar.gz*
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
