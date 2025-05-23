@@ -28,7 +28,7 @@ build:
     echo "END: Building httpx"
 
 webform:
-    name: url
+  - name: url
     prompt: URL
     type: text
 
