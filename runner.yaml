@@ -20,22 +20,21 @@ build:
 
     wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz && rm go1.21.6.linux-amd64.tar.gz
 
-    export GOROOT=/usr/local/go
-    export GOPATH=/go
-    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-    export GO111MODULE=on
-    export CGO_ENABLED=1
+    ENV GOROOT=/usr/local/go
+    ENV GOPATH=/go
+    ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+    ENV GO111MODULE=on
+    ENV CGO_ENABLED=1
 
     mkdir -p /go/src
     mkdir -p /go/bin
     cd /tmp && git clone --depth 1 https://github.com/projectdiscovery/httpx.git
     cd /tmp/httpx && go mod download
     cd /tmp/httpx && go install ./cmd/httpx
-    #/go/bin/httpx -u https://www.example.com -ss -o /tmp/tmp.png
     echo "END: Building httpx"
 
 webform:
-  - name: url
+    name: url
     prompt: URL
     type: text
 
