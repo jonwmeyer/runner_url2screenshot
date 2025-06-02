@@ -35,4 +35,4 @@ webform:
 
 launch:
   type: binary
-  command: /go/bin/httpx -u ${url} -ss -o /tmp/tmp.png
+  command: /go/bin/httpx -u ${url} -ss -oa /tmp/
