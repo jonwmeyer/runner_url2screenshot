@@ -21,6 +21,7 @@ build:
     ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
     ENV GO111MODULE=on
     ENV CGO_ENABLED=1
+    ENV _ROD_BROWSER_LAUNCH_ARGS='["--no-sandbox"]'
     mkdir -p /go/src
     mkdir -p /go/bin
     rm -rf /tmp/httpx
