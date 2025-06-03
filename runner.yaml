@@ -23,6 +23,7 @@ build:
     ENV CGO_ENABLED=1
     mkdir -p /go/src
     mkdir -p /go/bin
+    rm -rf /tmp/httpx
     cd /tmp && git clone --depth 1 https://github.com/projectdiscovery/httpx.git
     cd /tmp/httpx && go mod download
     cd /tmp/httpx && go install ./cmd/httpx
