@@ -37,4 +37,4 @@ webform:
 
 launch:
   type: binary
-  command: /go/bin/httpx -u ${url} -ss -args "no-sandbox" -o /screenshots/tmp.png
+  command: /go/bin/httpx -u ${url} -ss /screenshots/output_image.png -args "no-sandbox" -silent
