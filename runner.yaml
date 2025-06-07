@@ -22,7 +22,6 @@ build:
     ENV GO111MODULE=on
     ENV CGO_ENABLED=1
     ENV ROD_BROWSER_PATH=/usr/bin/chromium
-    /go/bin/httpx -version
     mkdir -p /go/src
     mkdir -p /go/bin
     mkdir -p /screenshots
