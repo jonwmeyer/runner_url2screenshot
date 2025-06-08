@@ -29,7 +29,6 @@ build:
     cd /tmp/httpx && go mod download
     cd /tmp/httpx && go install ./cmd/httpx
     /go/bin/httpx -version
-    /go/bin/httpx -version
     echo "END: Building httpx"
 
 webform:
@@ -39,4 +38,4 @@ webform:
 
 launch:
   type: binary
-  command: /go/bin/httpx -u ${url} -ss -args "no-sandbox" /screenshots/output_image.png
+  command: /go/bin/httpx -u ${url} -system-chrome -ss /screenshots/output_image
