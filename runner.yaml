@@ -21,7 +21,7 @@ build:
     ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
     ENV GO111MODULE=on
     ENV CGO_ENABLED=1
-    ENV ROD_BROWSER_PATH=/usr/bin/chromium
+    ENV ROD_BROWSER_PATH=/usr/bin/chromium-browser
     mkdir -p /go/src
     mkdir -p /go/bin
     mkdir -p /screenshots
@@ -29,6 +29,7 @@ build:
     cd /tmp/httpx && go mod download
     cd /tmp/httpx && go install ./cmd/httpx
     /go/bin/httpx -version
+    /usr/bin/chromium-browser -version
     echo "END: Building httpx"
 
 webform:
