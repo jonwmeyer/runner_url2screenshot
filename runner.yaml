@@ -6,7 +6,7 @@ runner:
 build:
   memorysize: 2560
   commands: |
-    echo "START: Building Scrapfly Capture"
+    echo "START: Building scrapfly capture"
     apt update
     apt install -y python3
     apt install -y python3-pip
@@ -20,17 +20,11 @@ build:
     ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
     ENV GO111MODULE=on
     ENV CGO_ENABLED=1
-    ENV ROD_BROWSER_PATH=/usr/bin/chromium-browser
     ENV SCRAPFLY_API_KEY="scp-live-e18aaf826f8b42ab9fda7d17f0f3fd6c"
     mkdir -p /go/src
     mkdir -p /go/bin
     mkdir -p /screenshots
-    cd /tmp && git clone --depth 1 https://github.com/projectdiscovery/httpx.git
-    cd /tmp/httpx && go mod download
-    cd /tmp/httpx && go install ./cmd/httpx
-    /go/bin/httpx -version
-    /usr/bin/chromium-browser -version
-    echo "END: Building Scrapfly capture"
+    echo "END: Building scrapfly capture"
 
 webform:
   - name: url
