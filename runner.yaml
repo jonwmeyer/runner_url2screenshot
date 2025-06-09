@@ -34,8 +34,8 @@ webform:
 
 launch:
   type: binary
-  command: /usr/bin/curl -G \
-    --request "GET" \
-    --url ${url} \
-    --data-urlencode "key=$SCRAPFLY_API_KEY" \
-    --data-urlencode "url=https://web-scraping.dev/product/1" -o /screenshots/screenshot.jpg
+  command: /usr/bin/curl -G
+    --request "GET"
+    --url "url=https://web-scraping.dev/product/1"
+    --data-urlencode "key=$SCRAPFLY_API_KEY"
+    --data-urlencode ${url} -o /screenshots/screenshot.jpg
