@@ -8,21 +8,26 @@ apt install -y ca-certificates
 apt install -y build-essential
 apt install -y git 
 apt install -y snap
-apt install -y chromium-browser
-apt install -y libglib2.0-0 libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libgbm1 libgtk-3-0 libpango-1.0-0 libx11-xcb1 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libasound2 libxshmfence1 libdbus-1-3
-wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz && rm go1.21.6.linux-amd64.tar.gz
+
 export GOROOT=/usr/local/go
 export GOPATH=/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export GO111MODULE=on
 export CGO_ENABLED=1
-export ROD_BROWSER_PATH=/usr/bin/chromium-browser
+export SCRAPFLY_API_KEY="scp-live-e18aaf826f8b42ab9fda7d17f0f3fd6c"
+export URL="https://example.com"
+
 mkdir -p /go/src
 mkdir -p /go/bin
 mkdir -p /screenshots
-cd /tmp && git clone --depth 1 https://github.com/projectdiscovery/httpx.git
-cd /tmp/httpx && go mod download
-cd /tmp/httpx && go install ./cmd/httpx
+
+wget https://go.dev/dl/go1.24.4.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.24.4.linux-amd64.tar.gz && rm go1.24.4.linux-amd64.tar.gz
+
+curl -G \
+--request "GET" \
+--url $URL \
+--data-urlencode "key=$SCRAPFLY_API_KEY" \
+--data-urlencode "url=https://web-scraping.dev/product/1" -o /screenshots/screenshot.jpg
 
 
-/go/bin/httpx -u https://www.example.com -ss -o /screenshots/tmp.png
+#echo "https://api.scrapfly.io/screenshot?url=https://example.com&key=$SCRAPFLY_API_KEY"
