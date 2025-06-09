@@ -36,6 +36,6 @@ launch:
   type: binary
   command: /usr/bin/curl -G
     --request "GET"
-    --url "url=https://web-scraping.dev/product/1"
+    --url https://api.scrapfly.io/screenshot
     --data-urlencode "key=$SCRAPFLY_API_KEY"
     --data-urlencode ${url} -o /screenshots/screenshot.jpg
