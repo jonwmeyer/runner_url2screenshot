@@ -7,7 +7,7 @@ apt install -y python-is-python3
 apt install -y ca-certificates
 apt install -y build-essential
 apt install -y git 
-apt install -y snap
+apt install -y curl
 
 export GOROOT=/usr/local/go
 export GOPATH=/go
