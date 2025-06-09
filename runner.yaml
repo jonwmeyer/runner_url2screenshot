@@ -28,7 +28,7 @@ build:
     echo "END: Building scrapfly capture"
 
 webform:
-  - name: url
+  - name: url_1
     prompt: URL
     type: text
 
@@ -37,5 +37,5 @@ launch:
   command: /usr/bin/curl -G
     --request "GET"
     --url https://api.scrapfly.io/screenshot
-    --data-urlencode "key=$SCRAPFLY_API_KEY"
-    --data-urlencode ${url} -o /screenshots/screenshot.jpg
+    --data-urlencode key=$SCRAPFLY_API_KEY
+    --data-urlencode url=${url_1} -o /screenshots/screenshot.jpg
