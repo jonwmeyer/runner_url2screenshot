@@ -24,7 +24,6 @@ build:
     ENV SCRAPFLY_API_KEY="scp-live-e18aaf826f8b42ab9fda7d17f0f3fd6c"
     mkdir -p /go/src
     mkdir -p /go/bin
-    mkdir -p /screenshots
     echo "END: Building scrapfly capture"
 
 webform:
@@ -37,5 +36,5 @@ launch:
   command: /usr/bin/curl -G
     --request "GET"
     --url https://api.scrapfly.io/screenshot
-    --data-urlencode key=$SCRAPFLY_API_KEY
-    --data-urlencode url=${url_1} -o /screenshots/screenshot.jpg
+    --data-urlencode "key=$SCRAPFLY_API_KEY"
+    --data-urlencode "url=${url_1}" -o /tmp/screenshot.jpg
