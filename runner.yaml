@@ -25,9 +25,6 @@ build:
     ENV TMP_DIR=/tmp/runner/*/outputs
     mkdir -p /go/src
     mkdir -p /go/bin
-    echo $start_time
-    echo $HOME
-    echo "END: Building scrapfly capture"
 
 webform:
   - name: url_1
