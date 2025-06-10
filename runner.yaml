@@ -15,15 +15,7 @@ build:
     apt install -y build-essential
     apt install -y git
     apt install -y curl
-    wget https://go.dev/dl/go1.24.4.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.24.4.linux-amd64.tar.gz && rm go1.24.4.linux-amd64.tar.gz
-    ENV GOROOT=/usr/local/go
-    ENV GOPATH=/go
-    ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-    ENV GO111MODULE=on
-    ENV CGO_ENABLED=1
     ENV SCRAPFLY_API_KEY="scp-live-e18aaf826f8b42ab9fda7d17f0f3fd6c"
-    mkdir -p /go/src
-    mkdir -p /go/bin
 
 webform:
   - name: url_1
@@ -36,4 +28,4 @@ launch:
     --request "GET"
     --url https://api.scrapfly.io/screenshot
     --data-urlencode "key=$SCRAPFLY_API_KEY"
-    --data-urlencode "url=${url_1}" -o $tmp_dir/outputs/screenshot.jpg
+    --data-urlencode "url=${url_1}" -o /tmp/screenshot.jpg
