@@ -22,8 +22,10 @@ build:
     ENV GO111MODULE=on
     ENV CGO_ENABLED=1
     ENV SCRAPFLY_API_KEY="scp-live-e18aaf826f8b42ab9fda7d17f0f3fd6c"
+    ENV TMP_DIR=/tmp/runner/*/outputs
     mkdir -p /go/src
     mkdir -p /go/bin
+    echo $start_time
     echo "END: Building scrapfly capture"
 
 webform:
@@ -37,4 +39,4 @@ launch:
     --request "GET"
     --url https://api.scrapfly.io/screenshot
     --data-urlencode "key=$SCRAPFLY_API_KEY"
-    --data-urlencode "url=${url_1}" -o /tmp/screenshot.jpg
+    --data-urlencode "url=${url_1}" -o $TMP_DIR/screenshot.jpg
