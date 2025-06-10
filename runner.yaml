@@ -26,6 +26,7 @@ build:
     mkdir -p /go/src
     mkdir -p /go/bin
     echo $start_time
+    echo $HOME
     echo "END: Building scrapfly capture"
 
 webform:
