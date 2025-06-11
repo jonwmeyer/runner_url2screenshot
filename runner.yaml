@@ -4,7 +4,7 @@ runner:
   version: 0.0.1
 
 build:
-  memorysize: 2560
+  memorysize: 1280
   commands: |
     echo "START: Building scrapfly capture"
     apt update
