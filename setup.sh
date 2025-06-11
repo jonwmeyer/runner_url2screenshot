@@ -14,7 +14,7 @@ export GOPATH=/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export GO111MODULE=on
 export CGO_ENABLED=1
-export SCRAPFLY_API_KEY="scp-live-e18aaf826f8b42ab9fda7d17f0f3fd6c"
+export SCRAPFLY_API_KEY=""
 export URL="https://example.com"
 
 mkdir -p /go/src
