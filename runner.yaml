@@ -28,4 +28,4 @@ launch:
     --request "GET"
     --url https://api.scrapfly.io/screenshot
     --data-urlencode "key=$SCRAPFLY_API_KEY"
-    --data-urlencode "url=${url_1}" -o /tmp/screenshot.jpg
+    --data-urlencode "url=${url_1}" -o outputs/screenshot.jpg
