@@ -30,4 +30,4 @@ launch:
     --data-urlencode "key=$SCRAPFLY_API_KEY"
     --data-urlencode "format=jpg"
     --data-urlencode "capture=fullpage"
-    --data-urlencode "url=${url_1}" -o outputs/screenshot
+    --data-urlencode "url=${url_1}" -o outputs/screenshot.jpg
