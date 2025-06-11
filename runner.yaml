@@ -7,7 +7,6 @@ build:
   memorysize: 1280
   commands: |
     echo "START: Building scrapfly capture"
-    ENV SCRAPFLY_API_KEY
     apt update
     apt install -y python3
     apt install -y python3-pip
