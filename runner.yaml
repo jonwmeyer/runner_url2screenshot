@@ -15,7 +15,7 @@ build:
     apt install -y build-essential
     apt install -y git
     apt install -y curl
-    ENV SCRAPFLY_API_KEY=""
+    ENV SCRAPFLY_API_KEY
 
 webform:
   - name: url_1
