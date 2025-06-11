@@ -24,10 +24,4 @@ webform:
 
 launch:
   type: binary
-  command: /usr/bin/curl -G
-    --request "GET"
-    --url https://api.scrapfly.io/screenshot
-    --data-urlencode "key=$SCRAPFLY_API_KEY"
-    --data-urlencode "format=jpg"
-    --data-urlencode "capture=fullpage"
-    --data-urlencode "url=${url_1}" -o outputs/screenshot.jpg
+  command: /usr/bin/curl -G --request 'GET' --url https://api.scrapfly.io/screenshot --data-urlencode 'key=$SCRAPFLY_API_KEY'  --data-urlencode 'capture=fullpage' --data-urlencode 'url=${url_1}' -o outputs/screenshot.jpg
