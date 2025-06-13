@@ -1,6 +1,6 @@
 runner:
   name: URL Screenshot
-  description: Captures a website screenshot via Scrapfly
+  description: Captures a website screenshot
   version: 0.0.1
 
 build:
@@ -26,4 +26,4 @@ launch:
   command: /usr/bin/curl -G --request "GET" 
     --url https://api.scrapfly.io/screenshot 
     --data-urlencode "key=$SCRAPFLY_API_KEY" 
-    --data-urlencode "url=${target_url}" -o outputs/screenshot.jpg
+    --data-urlencode "url=$target_url" -o outputs/screenshot.jpg
