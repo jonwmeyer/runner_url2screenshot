@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Run script for URL Screenshot Tool
-# Usage: ./run.sh https://example.com
+# Usage: ./run.sh https://example.com key
+
+#export SCRAPFLY_API_KEY="$2"
 
 # Check if URL argument is provided
 if [ $# -eq 0 ]; then

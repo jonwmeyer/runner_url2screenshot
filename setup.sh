@@ -9,7 +9,7 @@ sudo apt update
 
 # Install Python 3 and pip if not already installed
 echo "[*] Installing Python 3 and pip..."
-sudo apt install -y python3 python3-pip python3-venv
+sudo apt install -y --reinstall python3 python3-pip python3-venv
 
 # Create virtual environment
 echo "[*] Creating virtual environment..."
@@ -22,7 +22,6 @@ source venv/bin/activate
 # Install Python dependencies
 echo "[*] Installing Python dependencies..."
 pip install -r requirements.txt
-
 echo "[*] Setup complete!"
 echo "[*] To use the tool:"
 echo "    1. Set your Scrapfly API key: export SCRAPFLY_API_KEY='your-api-key-here'"
