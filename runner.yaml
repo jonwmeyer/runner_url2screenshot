@@ -1,6 +1,6 @@
 runner:
   name: URL to Screenshot
-  description: Uses a basic Scrapfly URL scrape to generate a screenshot
+  description: Utilizes a basic Scrapfly URL scrape to generate a screenshot.
   version: 0.0.1
 
 build:
