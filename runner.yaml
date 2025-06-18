@@ -1,5 +1,5 @@
 runner:
-  name: URL2screenshot
+  name: URL to Screenshot
   description: Uses a basic Scrapfly URL scrape to generate a screenshot
   version: 0.0.1
 
