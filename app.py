@@ -5,7 +5,7 @@ from datetime import datetime
 from scrapfly import ScrapflyClient, ScreenshotConfig
 
 def main():
-    parser = argparse.ArgumentParser(description="Take a screenshot of a URL using Scrapfly API.")
+    parser = argparse.ArgumentParser(description="Generate a screenshot of a URL using Scrapfly API.")
     parser.add_argument('url_to_screenshot', help='URL to take a screenshot of')
     args = parser.parse_args()
 
@@ -16,7 +16,7 @@ def main():
         print("[*] You can get an API key by registering at https://scrapfly.io", file=sys.stderr)
         return 1
     else:
-        print("[*] Scrapfly API Key found: ", api_key) # TODO: remove this
+        print("[*] Scrapfly API Key found.")
 
     scrapfly = ScrapflyClient(key=api_key)
 

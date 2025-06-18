@@ -1,6 +1,6 @@
 runner:
-  name: Test Scrapefly Screenshot
-  description: Test Scrapefly Screenshot
+  name: URL2screenshot
+  description: Uses a basic Scrapfly URL scrape to generate a screenshot
   version: 0.0.1
 
 build:
