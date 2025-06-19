@@ -9,7 +9,7 @@ sudo apt update
 
 # Install Python 3 and pip if not already installed
 echo "[*] Installing Python 3 and pip..."
-sudo apt install -y --reinstall python3 python3-pip python3-venv
+sudo apt install -y python3 python3-pip python3-venv
 
 # Create virtual environment
 echo "[*] Creating virtual environment..."
