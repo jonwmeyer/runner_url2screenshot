@@ -16,7 +16,8 @@ def main():
         print("[*] You can get an API key by registering at https://scrapfly.io", file=sys.stderr)
         return 1
     else:
-        print("[*] Scrapfly API Key found: ", api_key) # TODO: remove this
+        print("[*] Scrapfly API Key found: ")
+        #print("[*] Scrapfly API Key found: ", api_key) # TODO: remove this
 
     scrapfly = ScrapflyClient(key=api_key)
 
